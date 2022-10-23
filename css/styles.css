@@ -1,0 +1,130 @@
+:root {
+  --background-main: #f5f5f5;
+  --background-secondary: #fff;
+  --background-additional: #2f303a;
+  --background-rare: #f5f4fa;
+  --background-minor: #2196f3;
+  --color-main: #757575;
+  --color-secondary: #212121;
+  --color-additional: #fff;
+  --color-minor: #fff 60%;
+  --color-logo: #2196f3;
+  --color-logodark: #000;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--color-main);
+  background-color: var(--background-main);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.page-header {
+  background-color: var(--background-secondary);
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--color-logo);
+}
+
+.logo-dark {
+  color: var(--color-logodark);
+}
+
+.logo-light {
+  color: var(--color-additional);
+}
+
+.pagination {
+  color: var(--color-secondary);
+}
+
+.header-email,
+.header-tel {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--color-main);
+}
+
+.hero {
+  background-color: var(--background-additional);
+}
+
+.hero-title {
+  color: var(--color-additional);
+}
+
+.hero-button {
+  color: var(--color-additional);
+  background-color: var(--background-minor);
+}
+
+.performance-title,
+.team-title {
+  color: var(--color-secondary);
+}
+
+.peculiarities-subtitle,
+.team-subtitle {
+  color: var(--color-secondary);
+}
+
+.team {
+  background-color: var(--background-rare);
+}
+
+.team-item {
+  background-color: var(--background-secondary);
+}
+
+.page-footer {
+  background-color: var(--background-additional);
+}
+
+.info-address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-adds {
+  color: var(--color-additional);
+}
+
+.footer-email,
+.footer-tel {
+  color: var(--color-minor);
+}
+
+.portfolio-button {
+  color: var(--color-secondary);
+  background-color: var(--background-rare);
+}
+
+.portfolio-item {
+  background-color: var(--background-secondary);
+}
+
+.portfolio-title {
+  color: var(--color-secondary);
+}
+
+.portfolio-text {
+  color: var(--color-main);
+}
