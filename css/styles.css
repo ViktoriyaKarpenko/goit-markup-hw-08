@@ -10,6 +10,8 @@
   --color-minor: #fff 60%;
   --color-logo: #2196f3;
   --color-logodark: #000;
+  --color-hover: #2196f3;
+  --background-hiro-button: #188ce8;
 }
 
 body {
@@ -47,17 +49,28 @@ body {
   color: var(--color-additional);
 }
 
-.pagination {
+.logo:focus {
+  outline: none;
+}
+
+.pagination-link {
   color: var(--color-secondary);
 }
 
-.header-email,
-.header-tel {
+.contacts-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-main);
+}
+
+.pagination-link:hover,
+.contacts-link:hover,
+.pagination-link:focus,
+.contacts-link:focus {
+  color: var(--color-hover);
+  outline: none;
 }
 
 .hero {
@@ -71,6 +84,13 @@ body {
 .hero-button {
   color: var(--color-additional);
   background-color: var(--background-minor);
+  cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--background-hiro-button);
+  outline: none;
 }
 
 .performance-title,
@@ -95,7 +115,7 @@ body {
   background-color: var(--background-additional);
 }
 
-.info-address {
+.info {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -103,28 +123,49 @@ body {
   letter-spacing: 0.03em;
 }
 
-.footer-adds {
+.adds-link {
   color: var(--color-additional);
 }
 
-.footer-email,
-.footer-tel {
+.adds-link:focus {
+  outline: none;
+}
+
+.info-link {
   color: var(--color-minor);
 }
 
-.portfolio-button {
-  color: var(--color-secondary);
-  background-color: var(--background-rare);
+.info-link:hover,
+.info-link:focus {
+  color: var(--color-hover);
+  outline: none;
 }
 
-.portfolio-item {
+.filters-button {
+  color: var(--color-secondary);
+  background-color: var(--background-rare);
+  cursor: pointer;
+}
+
+.filters-button:hover,
+.filters-button:focus {
+  background-color: var(--background-minor);
+  color: var(--color-additional);
+  outline: none;
+}
+
+.project-item {
   background-color: var(--background-secondary);
 }
 
-.portfolio-title {
+.project-link:focus {
+  outline: none;
+}
+
+.project-title {
   color: var(--color-secondary);
 }
 
-.portfolio-text {
+.project-text {
   color: var(--color-main);
 }
