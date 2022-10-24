@@ -1,6 +1,5 @@
 :root {
-  --background-main: #f5f5f5;
-  --background-secondary: #fff;
+  --background-main: #fff;
   --background-additional: #2f303a;
   --background-rare: #f5f4fa;
   --background-minor: #2196f3;
@@ -12,10 +11,19 @@
   --color-logodark: #000;
   --color-hover: #2196f3;
   --background-hiro-button: #188ce8;
+  --font-weight-main: 700;
+  --font-weight-additional: 500;
+  --font-weight-footer: 400;
+  --font-size-main: 16px;
+  --font-size-additional: 14px;
+  --font-size-rare: 36px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
   color: var(--color-main);
   background-color: var(--background-main);
 }
@@ -28,8 +36,24 @@ body {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .page-header {
-  background-color: var(--background-secondary);
+  font-weight: var(--font-weight-additional);
+  font-size: var(--font-size-additional);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .logo {
@@ -37,7 +61,6 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   color: var(--color-logo);
 }
 
@@ -58,10 +81,6 @@ body {
 }
 
 .contacts-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   color: var(--color-main);
 }
 
@@ -73,17 +92,33 @@ body {
   outline: none;
 }
 
+.current {
+  color: var(--color-hover);
+}
+
 .hero {
   background-color: var(--background-additional);
 }
 
 .hero-title {
   color: var(--color-additional);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .hero-button {
   color: var(--color-additional);
   background-color: var(--background-minor);
+  font-family: inherit;
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-main);
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: 0;
   cursor: pointer;
 }
 
@@ -93,22 +128,53 @@ body {
   outline: none;
 }
 
-.performance-title,
-.team-title {
+.peculiarities-subtitle {
   color: var(--color-secondary);
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-additional);
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
-.peculiarities-subtitle,
-.team-subtitle {
+.peculiarities-text {
+  font-size: var(--font-size-additional);
+  line-height: 1.71;
+}
+
+.performance-title {
   color: var(--color-secondary);
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-rare);
+  line-height: 1.17;
+  text-align: center;
 }
 
 .team {
   background-color: var(--background-rare);
+  text-align: center;
+}
+
+.team-title {
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-rare);
+  line-height: 1.17;
 }
 
 .team-item {
-  background-color: var(--background-secondary);
+  background-color: var(--background-main);
+  font-size: var(--font-size-main);
+  line-height: 1.19;
+  text-transform: capitalize;
+}
+
+.team-subtitle {
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-additional);
+}
+
+.ui {
+  text-transform: uppercase;
 }
 
 .page-footer {
@@ -117,10 +183,9 @@ body {
 
 .info {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: var(--font-weight-footer);
+  font-size: var(--font-size-additional);
   line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 
 .adds-link {
@@ -144,6 +209,13 @@ body {
 .filters-button {
   color: var(--color-secondary);
   background-color: var(--background-rare);
+  font-family: inherit;
+  font-weight: var(--font-weight-additional);
+  font-size: var(--font-size-main);
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-align: center;
+  border: 0;
   cursor: pointer;
 }
 
@@ -154,18 +226,30 @@ body {
   outline: none;
 }
 
-.project-item {
-  background-color: var(--background-secondary);
-}
-
 .project-link:focus {
   outline: none;
 }
 
 .project-title {
   color: var(--color-secondary);
+  font-weight: var(--font-weight-main);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+}
+
+.vs,
+.has-no {
+  text-transform: none;
+}
+
+.lab {
+  text-transform: uppercase;
 }
 
 .project-text {
   color: var(--color-main);
+  font-size: var(--font-size-main);
+  line-height: 1.88;
 }
