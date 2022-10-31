@@ -10,6 +10,7 @@
   --color-logo: #2196f3;
   --color-logodark: #000;
   --color-hover: #2196f3;
+  --color-line: #ececec;
   --background-hiro-button: #188ce8;
   --font-weight-main: 700;
   --font-weight-additional: 500;
@@ -28,25 +29,43 @@ body {
   background-color: var(--background-main);
 }
 
-.link {
-  text-decoration: none;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-.list {
+ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
 .visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page-header {
@@ -54,9 +73,18 @@ body {
   font-size: var(--font-size-additional);
   line-height: 1.14;
   letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 93px;
 }
 
 .logo {
+  padding: 24px 0 25px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -76,8 +104,24 @@ body {
   outline: none;
 }
 
+.pagination-list {
+  display: flex;
+  padding: 32px 0;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
 .pagination-link {
   color: var(--color-secondary);
+}
+
+.contacts-list {
+  display: flex;
+  padding: 32px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .contacts-link {
@@ -96,9 +140,22 @@ body {
   color: var(--color-hover);
 }
 
+.section {
+  padding: 94px 0;
+}
+
 .hero {
   background-color: var(--background-additional);
 }
+
+/*.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 200px 0;
+}*/
 
 .hero-title {
   color: var(--color-additional);
@@ -120,6 +177,8 @@ body {
   letter-spacing: 0.06em;
   border: 0;
   cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
 }
 
 .hero-button:hover,
