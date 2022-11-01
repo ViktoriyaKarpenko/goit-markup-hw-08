@@ -11,6 +11,7 @@
   --color-logodark: #000;
   --color-hover: #2196f3;
   --color-line: #ececec;
+  --color-project-card: #eeeeee;
   --background-hiro-button: #188ce8;
   --font-weight-main: 700;
   --font-weight-additional: 500;
@@ -68,6 +69,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   border-bottom: 1px solid var(--color-line);
+  width: 100%;
+  max-width: 1600px;
 }
 
 .header-container {
@@ -140,6 +143,8 @@ img {
 }
 
 .section {
+  width: 100%;
+  max-width: 1600px;
   padding: 94px 0;
 }
 
@@ -271,6 +276,8 @@ img {
 }
 
 .page-footer {
+  width: 100%;
+  max-width: 1600px;
   background-color: var(--background-additional);
 }
 
@@ -308,6 +315,21 @@ img {
   margin-bottom: 8px;
 }
 
+.filters-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 56px;
+}
+
+.filters-button:first-child {
+  padding: 6px 25px;
+}
+
+.filters-button:not(:first-child) {
+  padding: 6px 22px;
+}
+
 .filters-button {
   color: var(--color-secondary);
   background-color: var(--background-rare);
@@ -318,6 +340,7 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   border: 0;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -328,8 +351,23 @@ img {
   outline: none;
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .project-link:focus {
   outline: none;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--color-project-card);
+  border-top: none;
+  padding: 20px 24px;
 }
 
 .project-title {
