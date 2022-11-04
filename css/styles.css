@@ -6,7 +6,7 @@
   --color-main: #757575;
   --color-secondary: #212121;
   --color-additional: #fff;
-  --color-minor: #fff 60%;
+  --color-minor: rgba(255, 255, 255, 0.6);
   --color-logo: #2196f3;
   --color-logodark: #000;
   --color-hover: #2196f3;
@@ -57,7 +57,16 @@ img {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .container {
@@ -107,9 +116,6 @@ img {
 .pagination-list {
   display: flex;
   gap: 50px;
-}
-
-.pagination-item:first-child {
   margin-left: 93px;
 }
 
@@ -188,7 +194,6 @@ img {
 .peculiarities-list {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   gap: 30px;
 }
 
