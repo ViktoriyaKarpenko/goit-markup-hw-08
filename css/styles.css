@@ -3,6 +3,7 @@
   --background-additional: #2f303a;
   --background-rare: #f5f4fa;
   --background-minor: #2196f3;
+  --background-gradient: rgba(47, 48, 58, 0.4);
   --color-main: #757575;
   --color-secondary: #212121;
   --color-additional: #fff;
@@ -12,6 +13,7 @@
   --color-hover: #2196f3;
   --color-line: #ececec;
   --color-project-card: #eeeeee;
+  --color-icon: #afb1b8;
   --background-hiro-button: #188ce8;
   --font-weight-main: 700;
   --font-weight-additional: 500;
@@ -128,12 +130,31 @@ img {
 .contacts-list {
   display: flex;
   align-items: center;
-  gap: 50px;
+  fill: var(--color-main);
+  cursor: pointer;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-item:first-child {
+  padding-right: 30px;
+}
+
+.contacts-item:hover .icon-smartphone {
+  fill: var(--color-hover);
+}
+
+.contacts-item:hover .icon-envelope {
+  fill: var(--color-hover);
 }
 
 .contacts-link {
   color: var(--color-main);
   padding: 32px 0;
+  margin-left: 10px;
 }
 
 .pagination-link:hover,
@@ -144,16 +165,23 @@ img {
   outline: none;
 }
 
-.current {
-  color: var(--color-hover);
-}
-
 .section {
   padding: 94px 0;
 }
 
 .hero {
   background-color: var(--background-additional);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/heroimg.jpg");
+  background-position: center;
   padding: 200px 0;
 }
 
@@ -201,10 +229,10 @@ img {
   width: 270px;
 }
 
-.peculiarities-item::before {
-  display: inline-block;
-  content: "";
-  width: 270px;
+.peculiarities-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   border-radius: 4px;
   background-color: var(--background-rare);
@@ -216,7 +244,7 @@ img {
   font-size: var(--font-size-additional);
   line-height: 1.14;
   text-transform: uppercase;
-  padding-top: 30px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -268,11 +296,13 @@ img {
   font-size: var(--font-size-main);
   line-height: 1.19;
   text-transform: capitalize;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-content {
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 .team-subtitle {
@@ -281,8 +311,41 @@ img {
   margin-bottom: 10px;
 }
 
+.team-text {
+  padding-bottom: 16px;
+}
+
 .ui {
   text-transform: uppercase;
+}
+
+.team-icon-item {
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--background-main);
+}
+
+.team-icon-img {
+  fill: var(--color-icon);
+}
+
+.team-icon-link:hover {
+  background-color: var(--background-minor);
+}
+
+.team-icon-img:hover {
+  fill: var(--color-additional);
 }
 
 .page-footer {
