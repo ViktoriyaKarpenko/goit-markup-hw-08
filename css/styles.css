@@ -130,24 +130,20 @@ img {
 .contacts-list {
   display: flex;
   align-items: center;
-  fill: var(--color-main);
-  cursor: pointer;
 }
 
 .contacts-item {
   display: flex;
   align-items: center;
+  fill: var(--color-main);
+  cursor: pointer;
 }
 
 .contacts-item:first-child {
   padding-right: 30px;
 }
 
-.contacts-item:hover .icon-smartphone {
-  fill: var(--color-hover);
-}
-
-.contacts-item:hover .icon-envelope {
+.contacts-item:hover {
   fill: var(--color-hover);
 }
 
@@ -158,8 +154,8 @@ img {
 }
 
 .pagination-link:hover,
-.contacts-link:hover,
 .pagination-link:focus,
+.contacts-link:hover,
 .contacts-link:focus {
   color: var(--color-hover);
   outline: none;
@@ -221,7 +217,6 @@ img {
 
 .peculiarities-list {
   display: flex;
-  justify-content: center;
   gap: 30px;
 }
 
@@ -303,6 +298,7 @@ img {
 
 .team-content {
   padding-top: 30px;
+  padding-bottom: 16px;
 }
 
 .team-subtitle {
@@ -311,41 +307,36 @@ img {
   margin-bottom: 10px;
 }
 
-.team-text {
-  padding-bottom: 16px;
-}
+/*.team-text {
+  
+}*/
 
 .ui {
   text-transform: uppercase;
 }
 
-.team-icon-item {
-  display: inline-flex;
+.team-icon-list {
+  display: flex;
+  align-items: center;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 30px;
 }
 
 .team-icon-link {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background-color: var(--background-main);
-}
-
-.team-icon-img {
   fill: var(--color-icon);
+  background-color: var(--background-main);
+  border-radius: 50%;
 }
 
-.team-icon-link:hover {
-  background-color: var(--background-minor);
-}
-
-.team-icon-img:hover {
+.team-icon-link:hover,
+.team-icon-link:focus {
   fill: var(--color-additional);
+  background-color: var(--background-minor);
 }
 
 .page-footer {
@@ -417,6 +408,8 @@ img {
   background-color: var(--background-minor);
   color: var(--color-additional);
   outline: none;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-list {
@@ -425,14 +418,19 @@ img {
   gap: 30px;
 }
 
-.project-link:focus {
-  outline: none;
-}
-
 .project-card {
   border: 1px solid var(--color-project-card);
   border-top: none;
   padding: 20px 24px;
+}
+
+.project-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project-link:focus {
+  outline: none;
 }
 
 .project-title {
