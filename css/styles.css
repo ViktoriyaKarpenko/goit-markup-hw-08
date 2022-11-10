@@ -132,25 +132,20 @@ img {
   align-items: center;
 }
 
-.contacts-item {
-  display: flex;
-  align-items: center;
-  fill: var(--color-main);
-  cursor: pointer;
-}
-
 .contacts-item:first-child {
   padding-right: 30px;
 }
 
-.contacts-item:hover {
-  fill: var(--color-hover);
+.contacts-link {
+  display: flex;
+  align-items: center;
+  color: var(--color-main);
+  fill: currentColor;
+  padding: 32px 0;
 }
 
-.contacts-link {
-  color: var(--color-main);
-  padding: 32px 0;
-  margin-left: 10px;
+.contacts-icon {
+  margin-right: 10px;
 }
 
 .pagination-link:hover,
@@ -297,14 +292,17 @@ img {
 }
 
 .team-content {
-  padding-top: 30px;
-  padding-bottom: 16px;
+  padding: 30px 0;
 }
 
 .team-subtitle {
   color: var(--color-secondary);
   font-weight: var(--font-weight-additional);
   margin-bottom: 10px;
+}
+
+.team-text {
+  margin-bottom: 16px;
 }
 
 .ui {
@@ -316,7 +314,6 @@ img {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 30px;
 }
 
 .team-icon-link {
@@ -365,8 +362,9 @@ img {
 }
 
 .clients-link:hover,
-.clients:focus {
+.clients-link:focus {
   fill: var(--color-hover);
+  outline: none;
   border: 1px solid var(--color-hover);
 }
 
@@ -377,8 +375,11 @@ img {
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
+}
+
+.logo-info {
+  margin-right: 70px;
 }
 
 .info {
@@ -409,10 +410,6 @@ img {
 
 .info-item:not(:last-child) {
   margin-bottom: 8px;
-}
-
-.social {
-  padding-right: 663px;
 }
 
 .social-titel {
@@ -490,19 +487,21 @@ img {
   gap: 30px;
 }
 
+.project-link {
+  display: block;
+}
+
 .project-card {
   border: 1px solid var(--color-project-card);
   border-top: none;
   padding: 20px 24px;
 }
 
-.project-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
+.project-link:hover,
 .project-link:focus {
   outline: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-title {
