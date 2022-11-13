@@ -21,6 +21,8 @@
   --font-size-main: 16px;
   --font-size-additional: 14px;
   --font-size-rare: 36px;
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --time: 250ms;
 }
 
 body {
@@ -120,11 +122,24 @@ img {
 .pagination-link {
   display: block;
   color: var(--color-secondary);
+  position: relative;
   padding: 32px 0;
+  transition: color var(--time) var(--cubic-bezier);
 }
 
 .current {
   color: var(--color-hover);
+}
+
+.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: var(--background-minor);
+  border-radius: 2px;
+  bottom: -1px;
 }
 
 .contacts-list {
@@ -142,6 +157,7 @@ img {
   color: var(--color-main);
   fill: currentColor;
   padding: 32px 0;
+  transition: color var(--time) var(--cubic-bezier);
 }
 
 .contacts-icon {
@@ -202,6 +218,7 @@ img {
   padding: 10px 32px;
   display: block;
   margin: 0 auto;
+  transition: background-color var(--time) var(--cubic-bezier);
 }
 
 .hero-button:hover,
@@ -325,6 +342,8 @@ img {
   fill: var(--color-icon);
   background-color: var(--background-main);
   border-radius: 50%;
+  transition: fill var(--time) var(--cubic-bezier),
+    background-color var(--time) var(--cubic-bezier);
 }
 
 .team-icon-link:hover,
@@ -359,6 +378,8 @@ img {
   fill: var(--color-icon);
   border: 1px solid var(--color-icon);
   border-radius: 4px;
+  transition: fill var(--time) var(--cubic-bezier),
+    border var(--time) var(--cubic-bezier);
 }
 
 .clients-link:hover,
@@ -400,6 +421,7 @@ img {
 
 .info-link {
   color: var(--color-minor);
+  transition: color var(--time) var(--cubic-bezier);
 }
 
 .info-link:hover,
@@ -435,6 +457,7 @@ img {
   fill: var(--color-additional);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color var(--time) var(--cubic-bezier);
 }
 
 .social-link:hover,
@@ -470,6 +493,9 @@ img {
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color var(--time) var(--cubic-bezier),
+    color var(--time) var(--cubic-bezier),
+    box-shadow var(--time) var(--cubic-bezier);
 }
 
 .filters-button:hover,
@@ -489,6 +515,7 @@ img {
 
 .project-link {
   display: block;
+  transition: box-shadow var(--time) var(--cubic-bezier);
 }
 
 .project-card {
