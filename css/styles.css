@@ -423,6 +423,12 @@ img {
 
 .footer-container {
   display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.info-social {
+  display: flex;
   align-items: baseline;
 }
 
@@ -461,7 +467,8 @@ img {
   margin-bottom: 8px;
 }
 
-.social-titel {
+.social-titel,
+.subscription-title {
   color: var(--color-additional);
   font-weight: var(--font-weight-main);
   font-size: var(--font-size-additional);
@@ -492,6 +499,59 @@ img {
   background-color: var(--background-minor);
   outline: none;
 }
+
+.subscription {
+  display: block;
+}
+
+.form-subs {
+  display: inline-block;
+  align-items: center;
+}
+
+.subs-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subs-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  color: var(--color-additional);
+  background-color: var(--background-minor);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-main);
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: center;
+  /*transition: background-color var(--time) var(--cubic-bezier),
+    color var(--time) var(--cubic-bezier),
+    box-shadow var(--time) var(--cubic-bezier);*/
+}
+
+.icon-send {
+  fill: currentColor;
+  margin-left: 10px;
+}
+
+/*.subs-button:hover,
+.subs-button:focus {
+  background-color: var(--background-minor);
+  color: var(--color-additional);
+  outline: none;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}*/
 
 .backdrop {
   position: fixed;
