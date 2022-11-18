@@ -712,9 +712,11 @@ img {
 .agree-input:checked + .agree-icon {
   background-color: transparent;
   background-color: var(--background-minor);
+  border-radius: 2px;
   background-image: url("../images/check.svg");
   background-size: contain;
   background-origin: border-box;
+  fill: none;
 }
 
 .filters-list {
