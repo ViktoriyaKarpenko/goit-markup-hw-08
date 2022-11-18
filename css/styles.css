@@ -519,6 +519,11 @@ img {
   font-size: var(--font-size-main);
   line-height: 1.25;
   outline: none;
+  transition: border-color var(--time) var(--cubic-bezier);
+}
+
+.subs-input:focus {
+  border-color: var(--color-hover);
 }
 
 .subs-button {
