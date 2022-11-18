@@ -691,6 +691,28 @@ img {
   position: absolute;
 }
 
+.agree-check {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 2px;
+  fill: none;
+  transition: border-color var(--time) var(--cubic-bezier);
+}
+
+.agree-input:checked + .agree-check {
+  fill: var(--color-additional);
+  background-color: var(--background-minor);
+  border: none;
+}
+.agree-input:focus + .agree-check {
+  border-color: var(--background-minor);
+}
+
 .agree-label {
   display: flex;
   height: 24px;
@@ -700,35 +722,10 @@ img {
   cursor: pointer;
 }
 
-.agree-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 15px;
-  fill: var(--color-secondary);
-  transition: fill var(--time) var(--cubic-bezier);
-}
-
 .agree-link {
   color: var(--color-hover);
   text-decoration: underline;
   outline: none;
-}
-
-.agree-input:checked + .agree-icon {
-  background-color: transparent;
-  background-color: var(--background-minor);
-  border-radius: 2px;
-  background-image: url("../images/check.svg");
-  background-size: contain;
-  background-origin: border-box;
-  fill: var(--color-hover);
-}
-
-.agree-label:focus-within .agree-icon {
-  fill: var(--color-hover);
 }
 
 .send-button {
