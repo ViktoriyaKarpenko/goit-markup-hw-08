@@ -673,13 +673,11 @@ img {
   transition: fill var(--time) var(--cubic-bezier);
 }
 
-.modal-input:hover,
 .modal-input:focus {
   border-color: var(--color-hover);
   outline: none;
 }
 
-.modal-comment:hover,
 .modal-comment:focus {
   border-color: var(--color-hover);
   outline: none;
@@ -721,7 +719,7 @@ img {
 }
 
 .agree-input:focus + .agree-check {
-  border-color: var(--color-secondary);
+  border-color: var(--color-hover);
 }
 
 .agree-label {
