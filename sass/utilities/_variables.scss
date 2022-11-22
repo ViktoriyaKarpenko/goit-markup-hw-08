@@ -27,6 +27,11 @@
     --font-size-additional: 14px;
     --font-size-rare: 36px;
     --font-size-minor: 18px;
-    --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
-    --time: 250ms;
-}
+$letter-spacing:(
+    'rare': 0.01em,
+    'minor': 0.02em,
+    'main': 0.03em,
+    'additional': 0.06em,
+);
+    $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+    $time: 250ms;
