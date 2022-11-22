@@ -1,0 +1,28 @@
+.contacts {
+    display: flex;
+    align-items: center;
+
+    &__item:first-child {
+        padding-right: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: var(--color-main);
+        fill: currentColor;
+        padding: 32px 0;
+        transition: color var(--time) var(--cubic-bezier);
+    
+        &:hover,
+        &:focus {
+             color: var(--color-hover);
+             outline: none;
+        }
+    }
+
+    &__icon {
+         margin-right: 10px;
+    }
+
+}

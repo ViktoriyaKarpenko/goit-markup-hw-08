@@ -1,0 +1,40 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 56px;
+
+    &__button {
+        color: var(--color-secondary);
+        background-color: var(--background-rare);
+        font-family: inherit;
+        font-weight: var(--font-weight-additional);
+        font-size: var(--font-size-main);
+        line-height: 1.63;
+        letter-spacing: 0.03em;
+        text-align: center;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color var(--time) var(--cubic-bezier),
+            color var(--time) var(--cubic-bezier),
+            box-shadow var(--time) var(--cubic-bezier);
+
+        &:first-child {
+            padding: 6px 25px;
+        }
+
+        &:not(:first-child) {
+            padding: 6px 22px;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: var(--background-minor);
+            color: var(--color-additional);
+            outline: none;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+    }
+}

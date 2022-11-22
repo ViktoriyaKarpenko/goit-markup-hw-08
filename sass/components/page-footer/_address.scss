@@ -1,0 +1,31 @@
+.address {
+    font-style: normal;
+    font-weight: var(--font-weight-footer);
+    font-size: var(--font-size-additional);
+    line-height: 1.71;
+    margin-top: 20px;
+
+    &__adds-link {
+    color: var(--color-additional);
+
+    &:focus {
+        outline: none;
+    }
+    }
+
+    &__contacts-link {
+        color: var(--color-minor);
+        transition: color var(--time) var(--cubic-bezier);
+
+        &:hover,
+        &:focus {
+            color: var(--color-hover);
+            outline: none;
+        }
+    }
+
+    &__item:not(:last-child) {
+    margin-bottom: 8px;
+    }
+
+}

@@ -1,0 +1,18 @@
+.page-header {
+    font-weight: var(--font-weight-additional);
+    font-size: var(--font-size-additional);
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid var(--color-line);
+
+    &__container {
+        @extend %container;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+@import '../logo';
+@import '../header/pagination';
+@import '../header/contacts';

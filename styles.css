@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --background-main: #fff;
   --background-additional: #2f303a;
   --background-rare: #f5f4fa;
@@ -445,11 +445,11 @@ img {
   align-items: baseline;
 }
 
-.page-footer__logo-info {
+.page-footer__logo-address {
   margin-right: 70px;
 }
 
-.page-footer__address {
+.address {
   font-style: normal;
   font-weight: var(--font-weight-footer);
   font-size: var(--font-size-additional);
@@ -457,30 +457,30 @@ img {
   margin-top: 20px;
 }
 
-.page-footer__adds-link {
+.address__adds-link {
   color: var(--color-additional);
 }
 
-.page-footer__adds-link:focus {
+.address__adds-link:focus {
   outline: none;
 }
 
-.page-footer__contacts-link {
+.address__contacts-link {
   color: var(--color-minor);
   transition: color var(--time) var(--cubic-bezier);
 }
 
-.page-footer__contacts-link:hover,
-.page-footer__contacts-link:focus {
+.address__contacts-link:hover,
+.address__contacts-link:focus {
   color: var(--color-hover);
   outline: none;
 }
 
-.page-footer__address-item:not(:last-child) {
+.address-item:not(:last-child) {
   margin-bottom: 8px;
 }
 
-.page-footer__title {
+.social__title {
   color: var(--color-additional);
   font-weight: var(--font-weight-main);
   font-size: var(--font-size-additional);
@@ -489,28 +489,28 @@ img {
   margin-bottom: 20px;
 }
 
-.page-footer__social-list {
+.social__list {
   display: flex;
   gap: 10px;
 }
 
-.page-footer__social-link {
+.social__link {
   fill: var(--color-additional);
   background-color: var(--background-social);
   transition: background-color var(--time) var(--cubic-bezier);
 }
 
-.page-footer__social-link:hover,
-.page-footer__social-link:focus {
+.social__link:hover,
+.social__link:focus {
   background-color: var(--background-minor);
   outline: none;
 }
 
-.page-footer__subscription {
+.subscription {
   display: inline-block;
 }
 
-.page-footer__subs-input {
+.subscription__subs-input {
   width: 358px;
   height: 50px;
   border: 1px solid var(--color-subs-input);
@@ -526,27 +526,27 @@ img {
   transition: border-color var(--time) var(--cubic-bezier);
 }
 
-.page-footer__subs-input:hover,
-.page-footer__subs-input:focus {
+.subscription__subs-input:hover,
+.subscription__subs-input:focus {
   border-color: var(--color-minor);
 }
 
-.page-footer__subs-button {
+.subscription__subs-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-.page-footer__subs-button:hover,
-.page-footer__subs-button:focus {
+.subscription__subs-button:hover,
+.subscription__subs-button:focus {
   background-color: var(--background-hiro-button);
   outline: none;
 }
 
-.page-footer__icon-send {
+.subscription__icon-send {
   fill: currentColor;
   margin-left: 10px;
-}
+}*/
 
 .backdrop {
   position: fixed;

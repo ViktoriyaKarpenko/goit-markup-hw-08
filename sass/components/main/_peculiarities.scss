@@ -1,0 +1,34 @@
+.peculiarities {
+    @extend %section;
+    @extend %container;
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        width: 270px;
+    }
+
+    &__icon {    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        border-radius: 4px;
+        background-color: var(--background-rare);
+    }
+
+    &__subtitle {
+        @extend %subtitle;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: var(--color-secondary);
+    }
+
+    &__text {    
+       font-size: var(--font-size-additional);
+       line-height: 1.71;
+    }
+}

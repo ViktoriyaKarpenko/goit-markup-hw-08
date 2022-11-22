@@ -1,0 +1,25 @@
+.social {
+    &__title {
+        color: var(--color-additional);
+        @extend %subtitle;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__link {
+        @extend %social-network;
+        fill: var(--color-additional);
+        background-color: var(--background-social);
+        transition: background-color var(--time) var(--cubic-bezier);
+
+        &:hover,
+        &:focus {
+            background-color: var(--background-minor);
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.portfolio {
+    @extend %container;
+    @extend %section;
+}
+
+@import './filters';
+@import './project';

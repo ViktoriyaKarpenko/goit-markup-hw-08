@@ -1,0 +1,26 @@
+.page-footer {
+    background-color: var(--background-additional);
+    padding: 60px 0;
+
+&__container {
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+&__info {
+    display: flex;
+    align-items: baseline;
+}
+
+&__logo-address {
+    margin-right: 70px;
+}
+
+}
+
+@import '../logo';
+@import './address';
+@import './social';
+@import './subscription';
