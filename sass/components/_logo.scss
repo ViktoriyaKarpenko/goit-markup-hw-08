@@ -1,16 +1,14 @@
 .logo {
     font-family: "Raleway", sans-serif;
-    font-weight: var (--font-weight-main);
-    font-size: 26px;
-    line-height: 1.19;
-    color: var(--color-logo);
+    @include font2 (map-get($font-weight, 'secondary'), map-get($font-size, 'logo'), map-get($line-height, 'minor'));
+    color: map-get($color, 'hover');
 
     &--dark {
-            color: var(--color-logodark);
+            color: map-get($color, 'logo-dark');
         }
     
     &--light {
-        color: var(--color-additional);
+        color: map-get($color, 'additional');
     }
 
     &:focus {
@@ -19,5 +17,5 @@
 
 }
 
-
+@import '../utils/mixins'
 

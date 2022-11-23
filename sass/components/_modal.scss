@@ -5,10 +5,10 @@
     transform: translate(-50%, -50%);
     width: 528px;
     height: 581px;
-    background-color: var(--background-main);
+    background-color: map-get($background-color, 'main');
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    border-radius: map-get($border-radius, 'main');
     transition: transform var(--time) var(--cubic-bezier);
     padding: 40px;
 
@@ -17,30 +17,27 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    display: flex;
-    align-items: center;
+    @include display1 (center);
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    background-color: var(--background-main);
+    border-radius: map-get($border-radius, 'additional');
+    background-color: map-get($background-color, 'main');
     cursor: pointer;
     outline: none;
     transition: fill var(--time) var(--cubic-bezier);
 
         &:hover,
         &:focus {
-        fill: var(--background-minor);
+        fill: map-get($color, 'hover');
     }
     }
 
 
 
     &__titel {
-    color: var(--color-secondary);
-    font-weight: var(--font-weight-main);
-    font-size: 20px;
-    line-height: 1.15;
+    color: map-get($color, 'secondary');
+    @include font2 (map-get($font-weight, 'secondary'), map-get($font-size, 'modal-title'), map-get($line-height, 'modal-title'));
     text-align: center;
     margin-bottom: 12px;
     }
@@ -51,16 +48,15 @@
 
     &__entry-field {
     position: relative;
-    color: var(--color-main);
-    font-size: 12px;
-    letter-spacing: 0.01em;
-    fill: var(--color-secondary);
+    color: map-get($color, 'main');
+    @include font4 (map-get($font-size, 'entry-field'), map-get($letter-spacing, 'rare'));
+    fill: map-get($color, 'secondary');
     }
 
     &__input {
     width: 100%;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+    border: 1px solid map-get($color, 'border-input');
+    border-radius: map-get($border-radius, 'main');
     margin-top: 4px;
     cursor: pointer;
     transition: border-color var(--time) var(--cubic-bezier);
@@ -72,7 +68,7 @@
     margin-bottom: 10px;
 
     &:focus {
-            border-color: var(--color-hover);
+            border-color: map-get($color, 'hover');
             outline: none;
         }
     }
@@ -84,7 +80,7 @@
     margin-bottom: 20px;
 
     &:focus {
-            border-color: var(--color-hover);
+            border-color: map-get($color, 'hover');
             outline: none;
         }
     }
@@ -98,7 +94,7 @@
     }
 
     &__entry-field:focus-within &__icon {
-    fill: var(--color-hover);
+    fill: map-get($color, 'hover');
     }
 
     &__agree {
@@ -121,32 +117,30 @@
     display: flex;
     width: 16px;
     height: 15px;
-    border: 2px solid var(--color-secondary);
-    border-radius: 2px;
+    border: 2px solid map-get($color, 'secondary');
+    border-radius: map-get($border-radius, 'rare');
     fill: none;
     transition: border-color var(--time) var(--cubic-bezier);
     }
 
     &__agree-input:checked+&__agree-check {
-    fill: var(--color-additional);
-    background-color: var(--background-minor);
+    fill: map-get($color, 'additional');
+    background-color: map-get($background-color, 'hover');
     border: none;
     }
 
     &__agree-input:focus+&__agree-check {
-    border-color: var(--color-hover);
+    border-color: map-get($color, 'hover');
     }
 
     &__agree-label {
-    display: flex;
-    justify-content: space-between;
-    font-size: var(--font-size-additional);
-    line-height: 1.71;
+    @include display4 (space-between);
+    @include font3 (map-get($font-size, 'additional'), map-get($line-height, 'rare'));
     cursor: pointer;
     }
 
     &__agree-link {
-    color: var(--color-hover);
+    color: map-get($color, 'hover');
     text-decoration: underline;
     outline: none;
     }
@@ -156,11 +150,13 @@
     display: block;
     margin: 30px auto 0;
     transition: background-color var(--time) var(--cubic-bezier);
-
+   
     &:hover,
     &:focus {
-        background-color: var(--background-hiro-button);
+        background-color: map-get($background-color, 'button-hover');
         outline: none;
     }
     }
 }
+
+@import '../utils/mixins'

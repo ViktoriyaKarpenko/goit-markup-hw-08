@@ -1,17 +1,14 @@
 .page-footer {
-    background-color: var(--background-additional);
+    background-color: map-get($background-color, 'additional');
     padding: 60px 0;
 
 &__container {
     @extend %container;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    @include display2 (flex, space-between, baseline);
 }
 
 &__info {
-    display: flex;
-    align-items: baseline;
+    @include display1 (baseline);
 }
 
 &__logo-address {
@@ -24,3 +21,4 @@
 @import './address';
 @import './social';
 @import './subscription';
+@import '../../utils/mixins';

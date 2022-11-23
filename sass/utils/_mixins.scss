@@ -1,0 +1,58 @@
+@mixin font1 ($weight, $size, $height, $spacing) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $spacing;
+}
+
+@mixin font2 ($weight, $size, $height) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin font3 ($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin font4 ($size, $spacing) {
+    font-size: $size;
+    letter-spacing: $spacing;
+}
+
+@mixin display1 ($align) {
+    display: flex;
+    align-items: $align;
+}
+
+@mixin display2 ($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin display3 ($gap) {
+    display: flex;
+    gap: $gap;
+}
+
+@mixin display4 ($justify) {
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin display5 ($justify, $align, $gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin display6 ($justify, $gap) {
+    display: flex;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+

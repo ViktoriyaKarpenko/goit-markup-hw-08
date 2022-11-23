@@ -1,25 +1,18 @@
 .filters {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+    @include display6 (center, 8px);
     margin-bottom: 56px;
 
     &__button {
-        color: var(--color-secondary);
-        background-color: var(--background-rare);
+        color: map-get($color, 'secondary');
+        background-color: map-get($background-color, 'rare');
         font-family: inherit;
-        font-weight: var(--font-weight-additional);
-        font-size: var(--font-size-main);
-        line-height: 1.63;
-        letter-spacing: 0.03em;
+        @include font1 (map-get($font-weight, 'additional'), map-get($font-size, 'main'), map-get($line-height, 'filters-button'), map-get($letter-spacing, 'main'));
         text-align: center;
         border: 0;
-        border-radius: 4px;
+        border-radius: map-get($border-radius, 'main');
         cursor: pointer;
-        transition: background-color var(--time) var(--cubic-bezier),
-            color var(--time) var(--cubic-bezier),
-            box-shadow var(--time) var(--cubic-bezier);
-
+        transition: background-color var(--time) var(--cubic-bezier), color var(--time) var(--cubic-bezier), box-shadow var(--time) var(--cubic-bezier);
+        
         &:first-child {
             padding: 6px 25px;
         }
@@ -30,11 +23,13 @@
 
         &:hover,
         &:focus {
-            background-color: var(--background-minor);
-            color: var(--color-additional);
+            background-color: map-get($background-color, 'hover');
+            color: map-get($color, 'additional');
             outline: none;
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
                 0px 2px 2px rgba(0, 0, 0, 0.12);
         }
     }
 }
+
+@import'../../utils/mixins'

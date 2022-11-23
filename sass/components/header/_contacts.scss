@@ -1,22 +1,20 @@
 .contacts {
-    display: flex;
-    align-items: center;
+    @include display1 (center);
 
     &__item:first-child {
         padding-right: 30px;
     }
 
     &__link {
-        display: flex;
-        align-items: center;
-        color: var(--color-main);
+        @include display1 (center);
+        color: map-get($color, 'main');
         fill: currentColor;
         padding: 32px 0;
         transition: color var(--time) var(--cubic-bezier);
     
         &:hover,
         &:focus {
-             color: var(--color-hover);
+             color: map-get($color, 'hover');
              outline: none;
         }
     }

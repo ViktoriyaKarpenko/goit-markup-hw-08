@@ -3,32 +3,31 @@
     @extend %container;
 
     &__list {
-        display: flex;
-        gap: 30px;
+        @include display3 (30px);
     }
 
     &__item {
         width: 270px;
     }
 
-    &__icon {    
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &__icon {   
+        @include display2 (flex, center, center);
         height: 120px;
-        border-radius: 4px;
-        background-color: var(--background-rare);
+        border-radius: map-get($border-radius, 'main');
+        background-color: map-get($background-color, 'rare');
     }
 
     &__subtitle {
         @extend %subtitle;
         margin-top: 30px;
         margin-bottom: 10px;
-        color: var(--color-secondary);
+        color: map-get($color, 'secondary');
     }
 
-    &__text {    
-       font-size: var(--font-size-additional);
-       line-height: 1.71;
+    &__text {   
+        @include font3 (map-get($font-size, 'additional'), map-get($line-height, 'rare'));
     }
 }
+
+
+@import '../../utils/mixins'

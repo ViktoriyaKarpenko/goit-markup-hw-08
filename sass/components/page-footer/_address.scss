@@ -1,12 +1,10 @@
 .address {
     font-style: normal;
-    font-weight: var(--font-weight-footer);
-    font-size: var(--font-size-additional);
-    line-height: 1.71;
+    @include font2 (map-get($font-weight, 'main'), map-get($font-size, 'additional'), map-get($line-height, 'rare'));
     margin-top: 20px;
 
     &__adds-link {
-    color: var(--color-additional);
+    color: map-get($color, 'additional');
 
     &:focus {
         outline: none;
@@ -14,12 +12,12 @@
     }
 
     &__contacts-link {
-        color: var(--color-minor);
+        color: map-get($color, 'minor');
         transition: color var(--time) var(--cubic-bezier);
 
         &:hover,
         &:focus {
-            color: var(--color-hover);
+            color: map-get($color, 'hover');
             outline: none;
         }
     }
@@ -29,3 +27,5 @@
     }
 
 }
+
+@import '../../utils/mixins';

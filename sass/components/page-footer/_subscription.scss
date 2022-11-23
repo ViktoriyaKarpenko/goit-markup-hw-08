@@ -2,7 +2,7 @@
     display: inline-block;
     
     &__title {
-            color: var(--color-additional);
+            color: map-get($color, 'additional');
             @extend %subtitle;
             margin-bottom: 20px;
         }
@@ -10,33 +10,30 @@
     &__subs-input {
     width: 358px;
     height: 50px;
-    border: 1px solid var(--color-subs-input);
+    border: 1px solid map-get($color, 'subs-input');
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
+    border-radius: map-get($border-radius, 'main');
     margin-right: 12px;
     padding: 0px 0px 0px 16px;
-    background-color: var(--background-additional);
-    color: var(--color-minor);
-    font-size: var(--font-size-main);
-    line-height: 1.25;
+    background-color: map-get($background-color, 'additional');
+    color: map-get($color, 'minor');
+    @include font3 (map-get($font-size, 'main'), map-get($line-height, 'subs-input'));
     outline: none;
     transition: border-color var(--time) var(--cubic-bezier);
 
     &:hover,
     &:focus {
-        border-color: var(--color-minor);
+        border-color: map-get($color, 'minor');
     }
     }
 
     &__subs-button {
     @extend %main-button;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
+    @include display2 (inline-flex, center, center);
+    
     &:hover,
     &:focus {
-        background-color: var(--background-hiro-button);
+        background-color: map-get($background-color, 'button-hover');
         outline: none;
     }
     }
@@ -46,3 +43,5 @@
     margin-left: 10px;
     }
 }
+
+@import '../../utils/mixins';

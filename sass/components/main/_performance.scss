@@ -10,32 +10,26 @@
     }
 
     &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
+        @include display5 (center, center, 30px);
     }
 
     &__item {
-        display: flex;
-        align-items: flex-end;
+        @include display1 (flex-end);
         width: 370px;
         position: relative;
     }
 
     &__text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display2 (flex, center, center);
         position: absolute;
         width: 100%;
         height: 70px;
-        color: var(--color-additional);
-        font-weight: var(--font-weight-main);
-        font-size: var(--font-size-additional);
-        line-height: 1.14;
+        color: map-get($color, 'additional');
+        @include font2 (map-get($font-weight, 'secondary'), map-get($font-size, 'additional'), map-get($line-height, 'main'));
         text-align: center;
         text-transform: uppercase;
-        background-color: var(--background-performance);
+        background-color: map-get($background-color, 'performance');
     }
 }
+
+@import '../../utils/mixins'

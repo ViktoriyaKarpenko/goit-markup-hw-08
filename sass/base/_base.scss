@@ -1,10 +1,10 @@
 body {
     font-family: "Roboto", sans-serif;
-    font-weight: var(--font-weight-footer);
+    font-weight: map-get($font-weight, 'main');
     font-style: normal;
-    letter-spacing: 0.03em;
-    color: var(--color-main);
-    background-color: var(--background-main);
+    letter-spacing: map-get($letter-spacing, 'main');
+    color: map-get($color, 'main');
+    background-color: map-get($background-color, 'main');
 }
 
 h1,

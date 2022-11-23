@@ -1,6 +1,7 @@
-@import './utilities/variables';
+@import './utils/variables';
 @import './base/base';
-@import './utilities/placeholders';
+@import './utils/placeholders';
+@import './utils/mixins';
 @import './base/visually-hidden';
 @import './components/header/page-header';
 @import './components/main/hero';

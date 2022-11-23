@@ -4,8 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--background-backdrop);
+    background-color: map-get($background-color, 'backdrop');
     opacity: 1;
-    transition: opacity var(--time) var(--cubic-bezier),
-        visibility var(--time) var(--cubic-bezier);
+    transition: opacity var(--time) var(--cubic-bezier), visibility var(--time) var(--cubic-bezier);;
 }

@@ -1,26 +1,23 @@
 .hero {
     @extend %section;
     @extend %container;
-    background-color: var(--background-additional);
+    background-color: map-get($background-color, 'additional');
     max-width: 1600px;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right,
-            var(--background-gradient),
-            var(--background-gradient)),
+            map-get($background-color, 'gradient'),
+            map-get($background-color, 'gradient')),
         url("../images/heroimg.jpg");
     background-position: center;
     padding: 200px 0;
 
     &__title {
             width: 696px;
-            color: var(--color-additional);
-            font-weight: 900;
-            font-size: 44px;
-            line-height: 1.36;
+            color: map-get($color, 'additional');
+            @include font1 (map-get($font-weight, 'rare'), map-get($font-size, 'hero-title'), map-get($line-height, 'hero-title'), map-get($letter-spacing, 'additional'));
             text-align: center;
-            letter-spacing: 0.06em;
             text-transform: uppercase;
             margin: 0 auto 30px;
         }
@@ -32,11 +29,11 @@
 
             &:hover,
             &:focus {
-                background-color: var(--background-hiro-button);
+                background-color: map-get($background-color, 'button-hover');
                 outline: none;
             }
         }
 }
 
-
+@import '../../utils/mixins'
 
