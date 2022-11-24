@@ -3,7 +3,6 @@
     padding: 60px 0;
 
 &__container {
-    @extend %container;
     @include display2 (flex, space-between, baseline);
 }
 

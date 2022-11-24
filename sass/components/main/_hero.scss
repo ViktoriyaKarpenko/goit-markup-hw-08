@@ -1,6 +1,5 @@
 .hero {
     @extend %section;
-    @extend %container;
     background-color: map-get($background-color, 'additional');
     max-width: 1600px;
     height: 600px;

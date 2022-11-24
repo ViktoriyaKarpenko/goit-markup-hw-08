@@ -1,6 +1,5 @@
 .peculiarities {
     @extend %section;
-    @extend %container;
 
     &__list {
         @include display3 (30px);

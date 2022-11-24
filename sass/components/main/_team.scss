@@ -1,5 +1,4 @@
 .team {
-    @extend %container;
     @extend %section;
     background-color: map-get($background-color, 'rare');
     text-align: center;

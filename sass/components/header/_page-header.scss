@@ -3,7 +3,6 @@
     border-bottom: 1px solid map-get($color, 'header-line');
 
     &__container {
-        @extend %container;
         @include display4 (space-between);
     }
 }
